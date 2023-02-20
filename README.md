@@ -85,7 +85,7 @@ Even though the model got the label wrong more times than those trained on Colab
 
 ## How to run
 
-It is important to know that these steps on how to run take into account that the whole process of creating the model has already been done in the [Edge Impulse] platform (https://www.edgeimpulse.com/). In addition, the MLOps [Weights and Biases (Wandb)]([Weights & Biases](https://wandb.ai/site) platform was used to send the data and the results of the transfer learning process performed on Google Colaboratory.
+It is important to know that these steps on how to run take into account that the whole process of creating the model has already been done in the [Edge Impulse] platform (https://www.edgeimpulse.com/). In addition, the MLOps [Weights & Biases (Wandb)](https://wandb.ai/site) platform was used to send the data and the results of the transfer learning process performed on Google Colaboratory.
 
 Clone this repository 
 
