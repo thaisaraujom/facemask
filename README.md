@@ -17,7 +17,7 @@ Furthermore, for comparison purposes, we performed the process of transfer learn
 This study was submitted for publication in the Journal Sensors MDPI in the Special Issue [“Intelligent Soft Sensors”](https://www.mdpi.com/journal/sensors/special_issues/intelligent_soft_sensors).
 
 Mariana B. Azevedo, Thaís de A. de Medeiros, Morsinaldo de A. Medeiros, Ivanovitch Silva, Daniel G.
-Costa. _A TinyML-based Soft-sensor Mask Detection Approach in the Context of COVID-19 Pandemic_ , MDPI Sensors, 2023. _Under Submission_.
+Costa. _A TinyML-based Soft-sensor Mask Detection Approach in the Context of COVID-19 Pandemic_, MDPI Sensors, 2023. _Under Submission_.
 
 ## The Big Picture
 
