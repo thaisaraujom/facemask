@@ -90,7 +90,7 @@ It is important to know that these steps on how to run take into account that th
 Clone this repository 
 
 ```
-git clone https://github.com/thaisaraujo2000/embedded_artificial_intelligence
+git clone https://github.com/thaisaraujo2000/facemask.git
 ```
 
 ### Part I - Running on Google Colaboratory
@@ -101,7 +101,7 @@ git clone https://github.com/thaisaraujo2000/embedded_artificial_intelligence
 
 3. In each code, put your Wandb username
 ```
-run = wandb.init(entity="your_user_name",project=args["project_name"], job_type="fetch_data")
+run = wandb.init(entity="username",project=args["project_name"], job_type="fetch_data")
 ```
 4. Run the notebooks according to the numbering order established in the name of each one
 
