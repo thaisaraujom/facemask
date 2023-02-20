@@ -92,6 +92,7 @@ Clone this repository
 ```
 git clone https://github.com/thaisaraujo2000/embedded_artificial_intelligence
 ```
+
 ### Part I - Running on Google Colaboratory
 
 1. Create an account on Wandb
@@ -153,4 +154,4 @@ Verify >> Upload
 
 - [Kaggle | Face mask Dataset](https://www.kaggle.com/datasets/ashishjangra27/face-mask-12k-images-dataset)
 
-- [Marcelo Rovai's course](https://github.com/Mjrovai/UNIFEI-IESTI01-TinyML-2022.1)# facemask
+- [Marcelo Rovai's course](https://github.com/Mjrovai/UNIFEI-IESTI01-TinyML-2022.1)
