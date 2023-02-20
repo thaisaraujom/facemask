@@ -21,6 +21,7 @@ Overall, our project was divided into three steps: The first steps; Train/Test a
 <p align='center'>
     <img src='./img/big_picture.png' width=500>
 </p>
+
 ### First Steps
 
 **The Goal**: Our project aims to create a classifier model that, given an image, indicates whether or not a person is wearing a mask.
