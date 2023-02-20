@@ -4,7 +4,7 @@
 
 Many people have been using machine learning to create innovative solutions in all areas of science. Some models have up to 99% accuracy, and that's very cool, but in general, these models are hefty, and trained for hours or even days on powerful GPUs. The challenge we bring today is: how to run such a model on an embedded device? In general, these devices have limited processing and memory, and should not have high power consumption.
 
-With that in mind, [Mariana Azevedo](https://github.com/marianabritoazevedo), [Morsinaldo Medeiros](https://github.com/morsinaldo) and I did a small project to embed a model that detects whether or not a person is wearing a mask from a photo into an Arduino Nano 33 BLE Sense provided by [Edge Impulse](https://edgeimpulse.com), which can be seen in the image below.
+With that in mind, [Mariana Azevedo](https://github.com/marianabritoazevedo), [Morsinaldo Medeiros](https://github.com/morsinaldo) and I did a small project to embed a model that detects whether or not a person is wearing a mask from a photo into an Arduino Nano 33 BLE Sense provided by [Edge Impulse](https://edgeimpulse.com), which can be seen in the image as follows. 
 
 <p align='center'>
     <img src='./img/kit.png' width=400>
@@ -14,6 +14,11 @@ Source: [Embarcados (2020)](https://embarcados.com.br/tinyml-machine-learning-pa
 
 Furthermore, for comparison purposes, we performed the process of transfer learning with the GPU of Google Colaboratory using three different architectures: VGG-16, DenseNet, and MobileNet.
 
+This study was submitted for publication in the Journal Sensors MDPI in the Special Issue [“Intelligent Soft Sensors”](https://www.mdpi.com/journal/sensors/special_issues/intelligent_soft_sensors).
+
+Mariana B. Azevedo, Thaís de A. de Medeiros, Morsinaldo de A. Medeiros, Ivanovitch Silva, Daniel G.
+Costa. _A TinyML-based Soft-sensor Mask Detection Approach in the Context of COVID-19 Pandemic_ , MDPI Sensors, 2023. _Under Submission_.
+
 ## The Big Picture
 
 Overall, our project was divided into three steps: The first steps; Train/Test and Deploy. The block diagram below shows the steps of our project. Initially, the first steps and the train/test stage were made on Google Colaboratory to compare three different transfer learning architectures, in order to analyze which one is the best to put in our final model. Then, the whole process was made on the Edge Impulse platform, deploying the final model on our Arduino Nano 33 board.
@@ -22,7 +27,7 @@ Overall, our project was divided into three steps: The first steps; Train/Test a
     <img src='./img/big_picture.png' width=500>
 </p>
 
-### First Steps
+## First Steps
 
 **The Goal**: Our project aims to create a classifier model that, given an image, indicates whether or not a person is wearing a mask.
 
