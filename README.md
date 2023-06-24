@@ -15,9 +15,9 @@ Source: [Embarcados (2020)](https://embarcados.com.br/tinyml-machine-learning-pa
 Furthermore, for comparison purposes, we performed the process of transfer learning with the GPU of Google Colaboratory using three different architectures: VGG-16, DenseNet, and MobileNet.
 
 
-This study was submitted for publication in the MDPI Journal Electronics, in the Special Issue [“Embedded Systems: Fundamentals, Design and Practical Applications”](https://www.mdpi.com/journal/electronics/special_issues/embedded_system_design).
+This study was submitted for publication in the Journal Elsevier [Machine Learning with Applications](https://www.sciencedirect.com/journal/machine-learning-with-applications).
 
-Mariana B. Azevedo, Thaís de A. de Medeiros, Morsinaldo de A. Medeiros, Ivanovitch Silva, Daniel G. Costa. _A TinyML Transfer Learning Approach to Support the Detection of Face Masks Using Affordable Microcontrollers_, MDPI Electronics, 2023. _Under Submission_.
+Mariana B. Azevedo, Thaís de A. de Medeiros, Morsinaldo de A. Medeiros, Ivanovitch Silva, Daniel G. Costa. _Detecting Face Masks Through Embedded Machine Learning Algorithms: a Transfer Learning Approach for Affordable Microcontrollers_, Elsevier Machine Learning with Applications, 2023. _Under Submission_.
 
 ## The Big Picture
 
