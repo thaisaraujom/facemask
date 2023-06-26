@@ -127,6 +127,10 @@ void cropImage(int srcWidth, int srcHeight, uint8_t *srcImage, int startX, int s
 /**
 * @brief      Arduino setup function
 */
+const int RLed = A7;
+const int GLed = A6;
+const int Buzzer = 12;
+const int pirPin = 11;
 void setup()
 {
     // put your setup code here, to run once:
@@ -134,7 +138,10 @@ void setup()
     // comment out the below line to cancel the wait for USB connection (needed for native USB)
     while (!Serial);
     Serial.println("Edge Impulse Inferencing Demo");
-
+    pinMode(RLed, OUTPUT);
+    pinMode(GLed, OUTPUT);
+    pinMode(Buzzer, OUTPUT);
+    pinMode(pirPin, INPUT);
     // summary of inferencing settings (from model_metadata.h)
     ei_printf("Inferencing settings:\n");
     ei_printf("\tImage resolution: %dx%d\n", EI_CLASSIFIER_INPUT_WIDTH, EI_CLASSIFIER_INPUT_HEIGHT);
@@ -150,8 +157,16 @@ void setup()
 void loop()
 {
     bool stop_inferencing = false;
+    int val = digitalRead(pirPin);
+    delay(1000);
 
-    while(stop_inferencing == false) {
+    if (val == HIGH){
+      ei_printf("\n val=HIGH");
+    }else{
+      ei_printf("\n val=LOW");
+    }
+    
+    while(stop_inferencing == false && val == HIGH) {
         ei_printf("\nStarting inferencing in 2 seconds...\n");
 
         // instead of wait_ms, we'll wait on the signal, this allows threads to cancel us...
@@ -226,6 +241,23 @@ void loop()
         for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
             ei_printf("    %s: %.5f\n", result.classification[ix].label,
                                         result.classification[ix].value);
+
+            if (result.classification[ix].label == "without_mask" && result.classification[ix].value > 0.5){
+              ei_printf("You're without mask!");
+              digitalWrite(RLed, HIGH);
+              digitalWrite(Buzzer, HIGH);
+              delay(2000);
+              digitalWrite(RLed, LOW);
+              digitalWrite(Buzzer, LOW);
+              delay(1000);
+            }
+            if (result.classification[ix].label == "with_mask" && result.classification[ix].value > 0.5){
+              ei_printf("You're wearing mask! =)");              
+              digitalWrite(GLed, HIGH);
+              delay(2000);
+              digitalWrite(GLed, LOW);
+              delay(1000);
+            }
         }
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
         ei_printf("    anomaly score: %.3f\n", result.anomaly);
@@ -239,8 +271,10 @@ void loop()
             }
         }
         if (snapshot_mem) ei_free(snapshot_mem);
+        val = digitalRead(pirPin);
+        delay(1000);
     }
-    ei_camera_deinit();
+    //ei_camera_deinit();
 }
 
 /**
