@@ -95,7 +95,7 @@ It is important to know that these steps on how to run take into account that th
 Clone this repository 
 
 ```
-git clone https://github.com/thaisaraujo2000/facemask.git
+git clone https://github.com/thaisaraujom/facemask.git
 ```
 
 ### Part I - Running on Google Colaboratory
